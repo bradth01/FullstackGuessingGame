@@ -128,19 +128,23 @@ function winLose(input){
 
 /* **** Event Listeners/Handlers ****  */
 // click handlers
-$('#guessButton').on('click', playersGuessSubmission);
+$(document).ready(function() {
+  $('#guessButton').on('click', playersGuessSubmission);
 
-$('#hint').on('click', provideHint);
+  $('#hint').on('click', provideHint);
 
-$('#reset').on('click', playAgain);
+  $('#reset').on('click', playAgain);
 
 // enter handler
-$('#guess').keypress(function(event){
+  $('#guess').keypress(function(event){
     var keycode = (event.keyCode ? event.keyCode : event.which);
     if(keycode == '13'){
-        playersGuessSubmission();  
+      playersGuessSubmission();  
     }
+  });
+  
 });
+
 
 })();
 
