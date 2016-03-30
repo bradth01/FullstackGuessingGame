@@ -3,19 +3,28 @@ body {
   text-align: center;
   background-color: #FFFBFC;
 }
-header{
-  padding:  50px;
+header {
+  padding:  10px;
   margin: 0 auto;
 }
 h4 {
+  margin: 10px;
   font-family: sans-serif;
-  color: #010400;
+  color: #EC058E;
+}
+h3 {
+  margin: 10px;
+  font-family: sans-serif;
+  color: #EC058E;
+  font-size: 24px;
 }
 input {
-  margin: 5px;
-  font-size: 18px;
+  margin: 20px;
+  width: 250px;
+  height: 30px;
+  font-size: 14px;
 }
-input:focus{
+input:focus {
   outline-color: #EC058E;
   outline-style: ridge;
 }
