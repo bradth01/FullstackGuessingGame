@@ -1,5 +1,5 @@
-/* **** Global Variables **** */
-// try to elminate these global variables in your project, these are here just to start.
+// IIFE for privacy
+(function(){
 
 var playersGuess;
 var winningNumber = generateWinningNumber();
@@ -116,9 +116,6 @@ function playAgain(){
   $('#guessCount').animate({'font-size' : '24px'}, 'fast');
 }
 
-
-/* **** Event Listeners/Handlers ****  */
-
 function winLose(input){
   if(input === "lose"){
     $('#guessCount').animate({'font-size' : '10px'}, 1200);
@@ -127,6 +124,27 @@ function winLose(input){
     $('#guessCount').animate({'font-size' : '38px'}, 1200); 
   }
 }
+
+
+/* **** Event Listeners/Handlers ****  */
+// click handlers
+$('#guessButton').on('click', playersGuessSubmission);
+
+$('#hint').on('click', provideHint);
+
+$('#reset').on('click', playAgain);
+
+// enter handler
+$('#guess').keypress(function(event){
+    var keycode = (event.keyCode ? event.keyCode : event.which);
+    if(keycode == '13'){
+        playersGuessSubmission();  
+    }
+});
+
+})();
+
+
 
 
 

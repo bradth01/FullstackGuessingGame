@@ -17,16 +17,16 @@
   </div>
 
   <div>
-    <button name="guess" id="guessButton" onclick="playersGuessSubmission()">Guess!</button>
+    <button name="guess" id="guessButton">Guess!</button>
   </div>
 
   <div>
-    <button name="hint" id="hint" onclick="provideHint()">Get a hint</button>
-    <button name="reset" id="reset" onclick="playAgain()">Start over!</button>
+    <button name="hint" id="hint">Get a hint</button>
+    <button name="reset" id="reset">Start over!</button>
   </div>
 
   <div>
-    <input type="number" id="guess" placeholder="Enter a number between 0 and 100!" class="form-control input" onkeydown="if (event.keyCode ===13) playersGuessSubmission()" autofocus></input>
+    <input type="number" id="guess" placeholder="Enter a number between 0 and 100!" class="form-control input" autofocus></input>
     <h4 id="checkGuess"></h4>
     <h4 id="lowHigh"></h4>
   </div>
